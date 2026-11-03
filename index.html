@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supreeth Chatakonda — Developer & Explorer</title>
+  <meta name="description" content="Personal portfolio of Supreeth Chatakonda — developer, footballer, and space enthusiast." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Supreeth Chatakonda</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.html">Résumé</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <p class="hero-eyebrow">Hi, I'm</p>
+    <h1>Supreeth Chatakonda</h1>
+    <p>Midfielder (Football) · Web Developer · Space Enthusiast</p>
+    <div>
+      <a href="#projects" class="btn btn-primary">View my work</a>
+      <a href="resume.html" class="btn btn-outline">Résumé</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p class="lead">
+          I'm a tech-savvy creator, a tactical athlete, and a cosmic thinker. I
+          believe that football fields and outer space require the same peak
+          physical stamina, mathematical calculation, and 360-degree teamwork.
+        </p>
+        <p class="lead" style="margin-top: 16px;">
+          My mission: build advanced web technology, master the midfield, and
+          train my mind and body to the absolute limits required for future
+          space exploration.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects">
+
+          <article class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>Age Eligibility Check</h3>
+            <p>
+              A multi-step digital tool that verifies and certifies age
+              eligibility for adult-classified responsibilities.
+            </p>
+            <ul>
+              <li>Guides users through a three-stage process: Date of Birth check, human security verification, and a details review</li>
+              <li>Generates a downloadable "Certificate of Age Eligibility" with the user's age, date of birth, clearance tier, and date of issue</li>
+            </ul>
+            <a href="https://supreethchatakonda.github.io/Eligiblity_Checkup/" target="_blank" rel="noopener" class="card-link">Open live site →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🚀</div>
+            <h3>My Cosmic Dashboard — Daily Space Hub</h3>
+            <p>
+              A central hub for space exploration media and interactive
+              astronomy experiences.
+            </p>
+            <ul>
+              <li>Searchable NASA Image Library pulling from historical missions and telescopes</li>
+              <li>Links to interactive experiences like NASA's Eyes on the Solar System and What Did Hubble See on Your Birthday?</li>
+              <li>Dedicated navigation pathways to official ISRO galleries for missions like Chandrayaan-3</li>
+            </ul>
+            <a href="https://supreethchatakonda.github.io/Night_Scanner/" target="_blank" rel="noopener" class="card-link">Open live site →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🪨</div>
+            <h3>Rock, Paper, Scissors</h3>
+            <p>
+              A feature-rich web adaptation of the classic game, played
+              against an AI opponent.
+            </p>
+            <ul>
+              <li>Customized opponent naming, multiple game lengths (Endless or Best of 3), and adjustable difficulty (Easy, Normal, Hard)</li>
+              <li>2-player local mode plus the Lizard &amp; Spock expansion</li>
+              <li>Optional "Cheat" mode, sound effects, and a full analytics section tracking round history and career statistics against the CPU</li>
+            </ul>
+            <a href="https://supreethchatakonda.github.io/HAND_GAME/" target="_blank" rel="noopener" class="card-link">Open live site →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Get in touch</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>
+              Have a project in mind, want to talk football, or just want to
+              geek out about space? Drop me a line.
+            </p>
+            <p>
+              Email:
+              <a href="mailto:chatakonda.supreeth@gmail.com">chatakonda.supreeth@gmail.com</a>
+            </p>
+            <p>
+              GitHub:
+              <a href="https://github.com/SupreethChatakonda" target="_blank" rel="noopener">github.com/SupreethChatakonda</a>
+            </p>
+          </div>
+          <form id="contact-form" action="mailto:chatakonda.supreeth@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-status" id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Supreeth Chatakonda</span>
+      <div class="footer-links">
+        <a href="https://github.com/SupreethChatakonda" target="_blank" rel="noopener">GitHub</a>
+        <a href="resume.html">Résumé</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Static site: fall back to the visitor's mail client so the form still works.
+    // Swap the form action for a service like Formspree to receive messages directly.
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      var status = document.getElementById("form-status");
+      status.textContent = "Opening your email client to send the message…";
+      status.className = "form-status visible success";
+    });
+  </script>
+
+</body>
+</html>
